@@ -15,7 +15,6 @@ import java.util.TreeSet;
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
 		Path path = Paths.get("Droplist.dat");
 		Boolean end = true;

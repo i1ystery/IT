@@ -1,1 +1,1 @@
-Max
+My Eclipse Projects

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class MusicLib {
+	
 	static Scanner s = new Scanner(System.in);
 
 	public static void start() throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
@@ -31,7 +32,6 @@ public class MusicLib {
 	}
 
 	private static void menu() throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		System.out.println("Music Store Management Program");
 		System.out.println("Music Store Menu");
 		System.out.println("1. Buy Music.");
@@ -45,30 +45,39 @@ public class MusicLib {
 		System.out.println("9. Exit.");
 		System.out.print("Choose One: ");
 		switch (s.nextInt()) {
+		
 		case 1:
 			BuySong();
 			break;
+			
 		case 2:
 			FindMusic();
 			break;
+			
 		case 3:
 			SoldItems();
 			break;
+			
 		case 4:
 			ItemsInStock();
 			break;
+			
 		case 5:
 			ShowAllItems();
 			break;
+			
 		case 6:
 			AddNewItemInDatabase();
 			break;
+			
 		case 7:
 			ModifySong();
 			break;
+			
 		case 8:
 			RemoveSong();
 			break;
+			
 		case 9:
 			System.exit(0);
 		default:
@@ -79,7 +88,6 @@ public class MusicLib {
 
 	private static void ItemsInStock()
 			throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		System.out.print("Loading");
 		Thread.sleep(500);
 		System.out.print(".");
@@ -96,7 +104,6 @@ public class MusicLib {
 
 	private static void SoldItems()
 			throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		System.out.print("Loading");
 		Thread.sleep(500);
 		System.out.print(".");
@@ -113,7 +120,6 @@ public class MusicLib {
 
 	private static void BuySong()
 			throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		System.out.println("Enter name of song you want to buy");
 		if (List.buySong(s.next()) == 1) {
 			Thread.sleep(500);
@@ -142,7 +148,6 @@ public class MusicLib {
 
 	private static void RemoveSong()
 			throws FileNotFoundException, ClassNotFoundException, InterruptedException, IOException {
-		// TODO Auto-generated method stub
 		System.out.println("Enter name of song to delete");
 		List.delete(s.next());
 		System.out.print("Deleting");
@@ -161,7 +166,6 @@ public class MusicLib {
 
 	private static void ModifySong()
 			throws FileNotFoundException, ClassNotFoundException, IOException, InterruptedException {
-		// TODO Auto-generated method stub
 		System.out.println("Enter name of song to modify");
 		List.modify(s.next());
 		System.out.print("Saving");
@@ -180,7 +184,6 @@ public class MusicLib {
 
 	private static void FindMusic()
 			throws FileNotFoundException, ClassNotFoundException, InterruptedException, IOException {
-		// TODO Auto-generated method stub
 		System.out.println("Enter name of song to search");
 		Song a = List.findSong(s.next());
 		System.out.print("Searching");
@@ -199,7 +202,6 @@ public class MusicLib {
 
 	private static void ShowAllItems()
 			throws FileNotFoundException, ClassNotFoundException, IOException, InterruptedException {
-		// TODO Auto-generated method stub
 		System.out.print("Loading");
 		Thread.sleep(500);
 		System.out.print(".");
@@ -216,7 +218,6 @@ public class MusicLib {
 
 	private static void AddNewItemInDatabase()
 			throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		Song s = new Song();
 		s.setCategory();
 		s.setType();

@@ -5,10 +5,9 @@ import java.util.Date;
 public class Shoe implements Serializable {
 	Calendar c;
 	private String brand;
-	String model;
+	String model, imglink;
 	Date releasedate;
 	Double price;
-	String imglink;
 
 	public String getBrand() {
 		return brand;

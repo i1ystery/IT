@@ -8,7 +8,6 @@ public class Phonebook {
 	static Scanner s = new Scanner(System.in);
 
 	public static void start() throws FileNotFoundException, ClassNotFoundException, InterruptedException, IOException {
-		// TODO Auto-generated method stub
 		System.out.print("\t\t\t\tLoading");
 		Thread.sleep(700);
 		System.out.print("\b\b\b\b\b\b\b");
@@ -36,30 +35,37 @@ public class Phonebook {
 	}
 
 	private static void menu() throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		System.out.println("\t\t**********WELCOME TO PHONEBOOK*************");
 		Thread.sleep(1000);
 		System.out.println("\t\t\t\t MENU\t\t");
 		Thread.sleep(1000);
 		System.out.println("\t\t 1.Add New   \t 2.List   \t 3.Exit  \n\t\t 4.Modify \t 5.Search\t 6.Delete\n");
 		switch (s.next()) {
+		
 		case "1":
 			addRecord();
 			break;
+			
 		case "2":
 			listRecord();
 			break;
+			
 		case "3":
 			System.exit(0);
+			break;
+			
 		case "4":
 			modifyRecord();
 			break;
+			
 		case "5":
 			searchRecord();
 			break;
+			
 		case "6":
 			deleteRecord();
 			break;
+			
 		default:
 			System.out.println("\t\t\t Enter 1 to 6 only\nEnter any key\n");
 			s.next();
@@ -70,7 +76,6 @@ public class Phonebook {
 
 	private static void deleteRecord()
 			throws FileNotFoundException, ClassNotFoundException, InterruptedException, IOException {
-		// TODO Auto-generated method stub
 		System.out.println("\t\t Enter name of person to delete");
 		SavedList.delete(s.next());
 		System.out.print("\t\t\t\t Deleting");
@@ -89,7 +94,6 @@ public class Phonebook {
 
 	private static void modifyRecord()
 			throws FileNotFoundException, ClassNotFoundException, IOException, InterruptedException {
-		// TODO Auto-generated method stub
 		System.out.println("\t\t Enter name of person to modify");
 		SavedList.modify(s.next());
 		System.out.print("\t\t\t\t Saving");
@@ -108,7 +112,6 @@ public class Phonebook {
 
 	private static void searchRecord()
 			throws FileNotFoundException, ClassNotFoundException, InterruptedException, IOException {
-		// TODO Auto-generated method stub
 		System.out.println("\t\t Enter name of person to search");
 		Record r = SavedList.findRecord(s.next());
 		System.out.print("\t\t\t\t Searching");
@@ -127,7 +130,6 @@ public class Phonebook {
 
 	private static void listRecord()
 			throws FileNotFoundException, ClassNotFoundException, IOException, InterruptedException {
-		// TODO Auto-generated method stub
 		System.out.print("\t\t\t\t Loading");
 		Thread.sleep(500);
 		System.out.print(".");
@@ -144,7 +146,6 @@ public class Phonebook {
 
 	private static void addRecord()
 			throws InterruptedException, FileNotFoundException, ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		Record r = new Record();
 		r.setRecordName();
 		r.setAddress();

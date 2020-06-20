@@ -4,13 +4,9 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class Record implements Serializable {
-	String recordName;
-	String address;
-	String fatherName;
-	String motherName;
-	String phoneNo;
+	
+	String recordName, address, fatherName, motherName, phoneNo, email;
 	char sex;
-	String email;
 	Integer citizenNo;
 	transient Scanner s = new Scanner(System.in);
 
@@ -26,7 +22,6 @@ public class Record implements Serializable {
 	}
 
 	public void setRecordName() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter record name");
 		String temp = s.next();
 		if (temp.matches(".{2,}|.{2,} .{2,}")) {
@@ -38,7 +33,6 @@ public class Record implements Serializable {
 	}
 
 	public void setAddress() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter address");
 		String temp = s.next();
 		if (temp.matches(".{4,}")) {
@@ -50,7 +44,6 @@ public class Record implements Serializable {
 	}
 
 	public void setFatherName() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter father name");
 		String temp = s.next();
 		if (temp.matches(".{2,}|.{2,} .{2,}")) {
@@ -66,7 +59,6 @@ public class Record implements Serializable {
 	}
 
 	public void setMotherName() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter mother name");
 		String temp = s.next();
 		if (temp.matches(".{2,}|.{2,} .{2,}")) {
@@ -82,7 +74,6 @@ public class Record implements Serializable {
 	}
 
 	public void setPhoneNo() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter phone no.(only numbers!)");
 		String temp = s.next();
 		if (temp.matches("(\\+{0,1}[0-9]{3}[0-9]{9})|([0-9]{9})")) {
@@ -94,7 +85,6 @@ public class Record implements Serializable {
 	}
 
 	public void setSex() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter sex");
 		char temp = s.next().charAt(0);
 		if (Character.toString(temp).matches("[M,m,F,f]")) {
@@ -106,7 +96,6 @@ public class Record implements Serializable {
 	}
 
 	public void setEmail() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter email");
 		String temp = s.next();
 		if (temp.matches(".*@.*")) {
@@ -118,7 +107,6 @@ public class Record implements Serializable {
 	}
 
 	public void setCitizenNo() {
-		// TODO Auto-generated method stub
 		System.out.println("Enter citizen no.(only numbers!)");
 		String temp = s.next();
 		if (temp.matches("[0-9]{7,}")) {

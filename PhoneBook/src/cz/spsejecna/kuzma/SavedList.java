@@ -11,11 +11,11 @@ import java.nio.file.Paths;
 import java.util.HashSet;
 
 public class SavedList {
+	
 	static HashSet<Record> list;
 	static Path path = Paths.get("savedList.dat");
 
 	public static void saveToList(Record r) throws FileNotFoundException, IOException, ClassNotFoundException {
-		// TODO Auto-generated method stub
 		try {
 			list = deserialize(path);
 			list.add(r);
@@ -54,7 +54,6 @@ public class SavedList {
 	}
 
 	public static Record findRecord(String nextLine) {
-		// TODO Auto-generated method stub
 		try {
 			list = deserialize(path);
 			for (Record r : list) {
@@ -66,10 +65,8 @@ public class SavedList {
 		} catch (FileNotFoundException e) {
 			System.out.println("List is empty");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return new Record();
@@ -77,7 +74,6 @@ public class SavedList {
 	}
 
 	public static void delete(String next) {
-		// TODO Auto-generated method stub
 		try {
 			list = deserialize(path);
 			for (Record r : list) {
@@ -95,7 +91,6 @@ public class SavedList {
 	}
 
 	public static void modify(String next) {
-		// TODO Auto-generated method stub
 		try {
 			list = deserialize(path);
 			for (Record r : list) {
@@ -112,7 +107,6 @@ public class SavedList {
 				}
 			}
 		} catch (ClassNotFoundException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

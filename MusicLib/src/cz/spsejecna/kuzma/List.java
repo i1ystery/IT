@@ -39,7 +39,6 @@ public class List {
 	}
 
 	public static Song findSong(String nextLine) {
-		// TODO Auto-generated method stub
 		try {
 			list = deserialize(path);
 			for (Song s : list) {
@@ -48,13 +47,12 @@ public class List {
 				}
 			}
 			System.out.println("Not found");
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("List is empty");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return new Song();
@@ -62,7 +60,6 @@ public class List {
 	}
 
 	public static void delete(String next) {
-		// TODO Auto-generated method stub
 		try {
 			list = deserialize(path);
 			for (Song s : list) {
@@ -80,7 +77,6 @@ public class List {
 	}
 
 	public static void modify(String next) {
-		// TODO Auto-generated method stub
 		try {
 			list = deserialize(path);
 			for (Song s : list) {
@@ -95,7 +91,6 @@ public class List {
 				}
 			}
 		} catch (ClassNotFoundException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -115,7 +110,6 @@ public class List {
 	}
 
 	public static int buySong(String nextLine) {
-		// TODO Auto-generated method stub
 		try {
 			int temp;
 			list = deserialize(path);
@@ -127,6 +121,7 @@ public class List {
 				}
 			}
 			return 0;
+			
 		} catch (FileNotFoundException e) {
 			return 0;
 		} catch (IOException | ClassNotFoundException e) {
@@ -136,7 +131,6 @@ public class List {
 	}
 
 	public static String SoldItems() throws ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		String a = "";
 		try {
 			list = deserialize(path);
@@ -154,7 +148,6 @@ public class List {
 	}
 
 	public static String ItemsInStock() throws ClassNotFoundException, IOException {
-		// TODO Auto-generated method stub
 		String a = "";
 		try {
 			list = deserialize(path);

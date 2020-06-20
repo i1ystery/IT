@@ -32,18 +32,23 @@ public class BusReservation extends Bus {
 				"\t\t 1.Install   \t 2.Reservation    3.Show reservation info  \n\t\t 4.Available Buses \t5.Exit\n");
 		System.out.print("\t\tEnter your choice -> ");
 		switch (s.next()) {
+		
 		case "1":
 			install();
 			break;
+			
 		case "2":
 			reservation();
 			break;
+			
 		case "3":
 			showreserve();
 			break;
+			
 		case "4":
 			availableBuses();
 			break;
+			
 		case "5":
 			System.exit(0);
 		default:
@@ -68,6 +73,7 @@ public class BusReservation extends Bus {
 		System.out.println("\t\tChoose the bus if available.");
 		System.out.print("\t\tEnter bus no. -> ");
 		int choice = s.nextInt();
+		
 		for (Bus b : temp) {
 			if (choice == b.no) {
 				b.returnSeats();
@@ -85,6 +91,7 @@ public class BusReservation extends Bus {
 		System.out.println("\t\tChoose the bus if available.");
 		System.out.print("\t\tEnter bus no. -> ");
 		int choice = s.nextInt();
+		
 		for (Bus b : temp) {
 			if (choice == b.no) {
 				b.chooseSeat();

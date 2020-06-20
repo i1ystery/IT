@@ -39,42 +39,52 @@ public class Main {
 								"Available brands:\n*Nike\n*Adidas\n*Gucci\n*Louis Vuitton\n*Vans\n*Balenciaga\n*Under Armour\n*Crocs\n*Reebok\nTo cancel adding: Cancel");
 						String brand = s.nextLine();
 						switch (brand.toUpperCase()) {
+						
 						case "NIKE":
 							shoe = Shoe.factoryNike();
 							enter(shoe);
 							break;
+							
 						case "ADIDAS":
 							shoe = Shoe.factoryAdidas();
 							enter(shoe);
 							break;
+							
 						case "GUCCI":
 							shoe = Shoe.factoryGucci();
 							enter(shoe);
 							break;
+							
 						case "LOUIS VUITTON":
 							shoe = Shoe.factoryLV();
 							enter(shoe);
 							break;
+							
 						case "VANS":
 							shoe = Shoe.factoryVans();
 							enter(shoe);
 							break;
+							
 						case "BALENCIAGA":
 							shoe = Shoe.factoryBalenciaga();
 							enter(shoe);
 							break;
+							
 						case "UNDER ARMOUR":
 							shoe = Shoe.factoryUnderArmour();
 							enter(shoe);
 							break;
+							
 						case "CROCS":
 							shoe = Shoe.factoryCrocs();
 							enter(shoe);
 							break;
+							
 						case "REEBOK":
 							shoe = Shoe.factoryReebok();
 							enter(shoe);
 							break;
+							
 						case "CANCEL":
 							break;
 						}
@@ -83,6 +93,7 @@ public class Main {
 							serialize(list, path);
 						}
 					}
+					
 					if (a.equalsIgnoreCase("D")) {
 						System.out.println("All models from droplist:");
 						for (Shoe e : list) {
@@ -100,6 +111,7 @@ public class Main {
 						}
 					}
 				}
+				
 				if (a.equalsIgnoreCase("E")) {
 					System.out.println("Exiting...");
 					end = false;

@@ -15,7 +15,7 @@ public class BusesList extends Bus {
 	static Path path = Paths.get("busList.dat");
 
 	public static void saveToList(Bus b) throws FileNotFoundException, IOException, ClassNotFoundException {
-		// TODO Auto-generated method stub
+		
 		try {
 			buses = deserialize(path);
 			buses.add(b);

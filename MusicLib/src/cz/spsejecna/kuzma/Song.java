@@ -4,15 +4,12 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class Song implements Serializable {
+	
 	static Scanner s = new Scanner(System.in);
 	private int tempID = 0;
-	int ID;
-	String category;
-	String type;
-	String name;
-	String artist;
-	int price;
-	int quantity;
+	int ID, price, quantity;
+	String category,type,name,artist;
+
 
 	public void setCategory() {
 		System.out.print("Enter song category: ");

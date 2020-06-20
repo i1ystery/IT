@@ -7,14 +7,13 @@ import java.util.Scanner;
 public class Bus implements Serializable {
 	static Scanner s = new Scanner(System.in);
 	int no;
-	String drName;
-	String arrTime;
-	String depTime;
-	String from;
-	String to;
+	String drName, arrTime, depTime, from, to;
 	int emptySeatsCount = 6;
 	ArrayList<String> seats = new ArrayList<String>();
-
+	
+/*
+ * Pøidává do Arraylistu 6 prázdných míst
+ */
 	public Bus() {
 		for (int i = 0; i < 6; i++) {
 			seats.add("Empty");
@@ -41,7 +40,10 @@ public class Bus implements Serializable {
 		this.to = s.next();
 		Thread.sleep(300);
 	}
-
+	
+/*
+ * vypisuje seats
+ */
 	public void returnSeats() {
 		System.out.println("\t\tSeats: ");
 		System.out.print("\t\t");
@@ -51,12 +53,13 @@ public class Bus implements Serializable {
 		}
 		System.out.println();
 	}
-
+	
 	public void chooseSeat() throws InterruptedException {
 		returnSeats();
 		System.out.print("\t\tChoose seat: ");
 		String name;
 		switch (s.nextInt()) {
+		
 		case 1:
 			System.out.print("\t\tEnter your name:");
 			name = s.next();
@@ -65,6 +68,7 @@ public class Bus implements Serializable {
 				emptySeatsCount--;
 			}
 			break;
+			
 		case 2:
 			System.out.print("\t\tEnter your name:");
 			name = s.next();
@@ -73,6 +77,7 @@ public class Bus implements Serializable {
 				emptySeatsCount--;
 			}
 			break;
+			
 		case 3:
 			System.out.print("\t\tEnter your name:");
 			name = s.next();
@@ -81,6 +86,7 @@ public class Bus implements Serializable {
 				emptySeatsCount--;
 			}
 			break;
+			
 		case 4:
 			System.out.print("\t\tEnter your name:");
 			name = s.next();
@@ -89,6 +95,7 @@ public class Bus implements Serializable {
 				emptySeatsCount--;
 			}
 			break;
+			
 		case 5:
 			System.out.print("\t\tEnter your name:");
 			name = s.next();
@@ -97,6 +104,7 @@ public class Bus implements Serializable {
 				emptySeatsCount--;
 			}
 			break;
+			
 		case 6:
 			System.out.print("\t\tEnter your name:");
 			name = s.next();
